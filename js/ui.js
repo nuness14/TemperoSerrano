@@ -10,23 +10,23 @@ import { formatarData, formatarDataHora, obterStatusEstoque, formatarCategoria }
 // Carregar componentes HTML
 export async function carregarComponentesHTML() {
     try {
-        // Carregar sidebar
-        const sidebarResponse = await fetch('../html/components/sidebar.html');
+        // Carregar sidebar - Caminho corrigido de html para htlml
+        const sidebarResponse = await fetch('../htlml/components/sidebar.html');
         const sidebarHTML = await sidebarResponse.text();
         document.getElementById('sidebar-container').innerHTML = sidebarHTML;
         
-        // Carregar dashboard
-        const dashboardResponse = await fetch('../html/components/dashboard.html');
+        // Carregar dashboard - Caminho corrigido
+        const dashboardResponse = await fetch('../htlml/components/dashboard.html');
         const dashboardHTML = await dashboardResponse.text();
         document.getElementById('dashboard-container').innerHTML = dashboardHTML;
         
-        // Carregar modal de item
-        const modalItemResponse = await fetch('../html/components/modal-item.html');
+        // Carregar modal de item - Caminho corrigido
+        const modalItemResponse = await fetch('../htlml/components/modal-item.html');
         const modalItemHTML = await modalItemResponse.text();
         document.getElementById('modal-item-container').innerHTML = modalItemHTML;
         
-        // Carregar modal de exclusão
-        const modalDeleteResponse = await fetch('../html/components/modal-delete.html');
+        // Carregar modal de exclusão - Caminho corrigido
+        const modalDeleteResponse = await fetch('../htlml/components/model-delete.html');
         const modalDeleteHTML = await modalDeleteResponse.text();
         document.getElementById('modal-delete-container').innerHTML = modalDeleteHTML;
     } catch (error) {
@@ -134,6 +134,8 @@ export function abrirModalEditarItem(itemId) {
     DOM.modalItem.style.display = 'flex';
 }
 
+// Carregar modal de exclusão
+const modalDeleteResponse = await fetch('../htlml/components/model-delete.html');
 // Abrir o modal de confirmação de exclusão
 export function abrirModalExcluir(itemId) {
     // Encontrar o item
