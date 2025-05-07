@@ -1,6 +1,5 @@
-/* Arquivo principal CSS que importa todos os outros */
-@import 'base.css';
-@import 'layout.css';
-@import 'components.css';
-@import 'modals.css';
-@import 'responsive.css';
+@import "base.css";
+@import "layout.css";
+@import "components.css";
+@import "modals.css";
+@import "responsive.css";
