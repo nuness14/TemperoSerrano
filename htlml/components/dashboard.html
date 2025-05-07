@@ -1,0 +1,71 @@
+<div class="dashboard">
+    <div class="dashboard-header">
+        <h1>Controle de Estoque</h1>
+        <button id="botaoAdicionarItem" class="btn-primary"><i class="fas fa-plus"></i> Adicionar Item</button>
+    </div>
+
+    <div class="stats-cards">
+        <div class="stat-card">
+            <div class="stat-value" id="totalItens">0</div>
+            <div class="stat-label">Total de Itens</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" id="estoqueBaixo">0</div>
+            <div class="stat-label">Estoque Baixo</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" id="categorias">0</div>
+            <div class="stat-label">Categorias</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" id="valorTotal">R$0</div>
+            <div class="stat-label">Valor Total</div>
+        </div>
+    </div>
+
+    <div class="filter-section">
+        <div class="filter-group">
+            <label for="filtroCategoria">Categoria:</label>
+            <select id="filtroCategoria">
+                <option value="all">Todas as Categorias</option>
+                <option value="hortifruti">Hortifrúti</option>
+                <option value="carnes">Carnes</option>
+                <option value="laticinios">Laticínios</option>
+                <option value="secos">Secos</option>
+                <option value="bebidas">Bebidas</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="filtroEstoque">Nível de Estoque:</label>
+            <select id="filtroEstoque">
+                <option value="all">Todos os Níveis</option>
+                <option value="baixo">Estoque Baixo</option>
+                <option value="normal">Normal</option>
+                <option value="alto">Estoque Alto</option>
+            </select>
+        </div>
+        <button id="botaoLimparFiltros" class="btn-secondary">Limpar Filtros</button>
+    </div>
+
+    <div class="inventory-table-container">
+        <table id="tabelaEstoque" class="inventory-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do Item</th>
+                    <th>Categoria</th>
+                    <th>Quantidade</th>
+                    <th>Unidade</th>
+                    <th>Preço Unit.</th>
+                    <th>Valor Total</th>
+                    <th>Atualizado em</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabelaEstoque">
+                <!-- Linhas da tabela serão adicionadas dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+</div>

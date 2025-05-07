@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle de Estoque - Restaurante</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Component -->
+        <div id="sidebar-container"></div>
+
+        <main class="content">
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" id="campoBusca" placeholder="Buscar no estoque...">
+                    <button id="botaoBusca"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-info">
+                    <span>Última atualização: <span id="ultimaAtualizacao">Hoje, 14:30</span></span>
+                    <button id="botaoAtualizar"><i class="fas fa-sync-alt"></i></button>
+                </div>
+            </header>
+
+            <!-- Dashboard Component -->
+            <div id="dashboard-container"></div>
+        </main>
+    </div>
+
+    <!-- Modal Components -->
+    <div id="modal-item-container"></div>
+    <div id="modal-delete-container"></div>
+
+    <!-- Notificação Toast -->
+    <div id="toast" class="toast">
+        <div id="mensagemToast"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js" type="module"></script>
+</body>
+</html>
